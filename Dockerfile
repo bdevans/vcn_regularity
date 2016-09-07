@@ -11,7 +11,8 @@ RUN conda install --quiet --yes \
     'cython=0.23*' \
     'nose=1.3*' \
     'brian2' \
-    'brian2tools'
+    'brian2tools' \
+    'joblib'
 
 # Fix matplotlib font cache
 RUN rm -rf /home/main/.matplolib
