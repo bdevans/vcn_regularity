@@ -14,6 +14,11 @@ RUN conda install --quiet --yes \
     'brian2tools' \
     'joblib'
 
+# Install and configure nbextensions
+RUN conda install --quiet --yes -c conda-forge jupyter_contrib_nbextensions
+RUN jupyter nbextension enable init_cell/main
+RUN jupyter nbextension enable hide_input_all/main
+
 # Fix matplotlib font cache
 RUN rm -rf /home/main/.matplolib
 RUN rm -rf /home/main/.cache/matplolib
