@@ -27,10 +27,10 @@ RUN rm -rf /home/main/.cache/fontconfig
 RUN python -c "import matplotlib.pyplot as plt"
 
 # Trust the notebooks
-RUN ls
-RUN jupyter trust notebooks/basic_model.ipynb
-RUN jupyter trust index.ipynb
-RUN jupyter trust deafferentation.ipynb
-RUN jupyter trust basic_model.ipynb
-RUN jupyter trust level_dependence_density.ipynb
-RUN jupyter trust maps.ipynb
+#RUN ls
+#RUN jupyter trust notebooks/basic_model.ipynb
+#RUN jupyter trust index.ipynb
+#RUN jupyter trust deafferentation.ipynb
+#RUN jupyter trust basic_model.ipynb
+#RUN jupyter trust level_dependence_density.ipynb
+#RUN jupyter trust maps.ipynb
