@@ -18,6 +18,7 @@ RUN conda install --quiet --yes \
 RUN conda install --quiet --yes -c conda-forge jupyter_contrib_nbextensions
 RUN jupyter nbextension enable init_cell/main
 RUN jupyter nbextension enable hide_input_all/main
+RUN conda install -c conda-forge ipywidgets
 
 # Fix matplotlib font cache
 RUN rm -rf /home/main/.matplolib
@@ -25,3 +26,10 @@ RUN rm -rf /home/main/.cache/matplolib
 RUN rm -rf /home/main/.cache/fontconfig
 RUN python -c "import matplotlib.pyplot as plt"
 
+# Trust the notebooks
+RUN jupyter trust basic_model.ipynb
+RUN jupyter trust index.ipynb
+RUN jupyter trust deafferentation.ipynb
+RUN jupyter trust basic_model.ipynb
+RUN jupyter trust level_dependence_density.ipynb
+RUN jupyter trust maps.ipynb
