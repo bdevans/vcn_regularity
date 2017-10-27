@@ -27,10 +27,10 @@ RUN rm -rf /home/main/.cache/fontconfig
 RUN python -c "import matplotlib.pyplot as plt"
 
 # Trust the notebooks
-RUN jupyter trust /home/main/notebooks/basic_model.ipynb
-RUN jupyter trust /home/main/notebooks/index.ipynb
-RUN jupyter trust /home/main/notebooks/deafferentation.ipynb
-RUN jupyter trust /home/main/notebooks/basic_model.ipynb
-RUN jupyter trust /home/main/notebooks/level_dependence_density.ipynb
-RUN jupyter trust /home/main/notebooks/maps.ipynb
+#RUN jupyter trust /home/main/notebooks/basic_model.ipynb
+#RUN jupyter trust /home/main/notebooks/index.ipynb
+#RUN jupyter trust /home/main/notebooks/deafferentation.ipynb
+#RUN jupyter trust /home/main/notebooks/basic_model.ipynb
+#RUN jupyter trust /home/main/notebooks/level_dependence_density.ipynb
+#RUN jupyter trust /home/main/notebooks/maps.ipynb
 RUN jupyter nbextension enable --py widgetsnbextension
