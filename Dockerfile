@@ -20,6 +20,16 @@ RUN jupyter nbextension enable init_cell/main
 RUN jupyter nbextension enable hide_input_all/main
 RUN conda install -c conda-forge ipywidgets
 
+# Make sure to trust the notebooks we have to explicitly do the copying ourselves
+WORKDIR $HOME
+#RUN git clone git://github.com/https://github.com/neural-reckoning/vcn_regularity.git
+COPY *.ipynb .
+RUN mv *.ipynb notebooks
+USER root
+RUN chown -R main:main $HOME/notebooks
+USER main
+RUN find ./notebooks -name '*.ipynb' -exec jupyter trust {} \;
+
 # Fix matplotlib font cache
 RUN rm -rf /home/main/.matplolib
 RUN rm -rf /home/main/.cache/matplolib
