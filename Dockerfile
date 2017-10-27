@@ -23,7 +23,7 @@ RUN conda install -c conda-forge ipywidgets
 # Make sure to trust the notebooks we have to explicitly do the copying ourselves
 WORKDIR $HOME
 #RUN git clone git://github.com/https://github.com/neural-reckoning/vcn_regularity.git
-COPY *.ipynb .
+COPY *.ipynb ./
 RUN mv *.ipynb notebooks
 USER root
 RUN chown -R main:main $HOME/notebooks
