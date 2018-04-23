@@ -4,7 +4,7 @@ channels:
 - defaults
 - brian-team
 dependencies:
-- brian2=2.1.2
+- brian2=2.0.1
 - jupyter_contrib_core=0.3.3
 - jupyter_nbextensions_configurator=0.2.8
 - cython=0.26.1
