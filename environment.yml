@@ -1,0 +1,36 @@
+name: root
+channels:
+- conda-forge
+- defaults
+- brian-team
+dependencies:
+- brian2=2.0.1
+- jupyter_contrib_core=0.3.3
+- jupyter_nbextensions_configurator=0.2.8
+- cython=0.26.1
+- decorator=4.1.2
+- ipaddress=1.0.18
+- ipykernel=4.6.1
+- ipython=5.4.1
+- ipython-notebook=4.0.4
+- ipython-qtconsole=4.0.1
+- ipython_genutils=0.2.0
+- ipywidgets=7.0.0
+- jupyter_client=5.1.0
+- jupyter_core=4.3.0
+- matplotlib=1.5.1
+- nbconvert=5.3.1
+- nbformat=4.4.0
+- notebook=5.0.0
+- numpy=1.10.4
+- pip=9.0.1
+- pyparsing=2.2.0
+- python=2.7.14
+- scipy=0.17.0
+- setuptools=36.5.0
+- sympy=1.1.1
+- widgetsnbextension=3.0.2
+- pip:
+  - joblib==0.8.4
+  - py-cpuinfo==0.1.2
+prefix: C:\Anaconda
