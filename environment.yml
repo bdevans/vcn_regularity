@@ -30,15 +30,6 @@ dependencies:
 - sympy=1.1.1
 - widgetsnbextension=3.0.2
 - pip:
-  - ipython-genutils==0.2.0
   - joblib==0.8.4
-  - jupyter==1.0.0
-  - jupyter-client==5.1.0
-  - jupyter-console==4.1.1
-  - jupyter-contrib-core==0.3.3
-  - jupyter-core==4.3.0
-  - jupyter-nbextensions-configurator==0.2.8
   - py-cpuinfo==0.1.2
-  - python-contrib-nbextensions==alpha
-  - weave==0.15.0
 prefix: C:\Anaconda
