@@ -5,7 +5,6 @@ channels:
 - brian-team
 dependencies:
 - brian2=2.1.2
-- gsl=2.2.1=vc9_2
 - jupyter_contrib_core=0.3.3=py27_0
 - jupyter_nbextensions_configurator=0.2.8=py27_0
 - libxml2=2.9.3=vc9_9
