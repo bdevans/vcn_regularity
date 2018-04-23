@@ -41,6 +41,7 @@ def brian2_progress_reporter():
     Returns a widget and callback function to be used with Brian 2
     '''
     progress_slider = ipw.FloatProgress(description="Simulation progress", min=0, max=1)
+    progress_slider.layout.width = '100%'
     def update_progress(elapsed, complete, t_start, duration):
         progress_slider.value = complete
         if complete==1:
@@ -126,8 +127,7 @@ def model_explorer(models):
             </p>'''.format(text=text))
     widget_interact_container = ipw.VBox()
     additional_controls_container = ipw.VBox()
-    params_widgets = [html_header('Parameters'), widget_interact_container, additional_controls_container,
-                      html_header('Results')]
+    params_widgets = [html_header('Parameters'), widget_interact_container, additional_controls_container]
     widget_parameters_container = ipw.VBox(children=params_widgets)
 
     ################# OVERALL TABS FOR GUI
@@ -146,8 +146,6 @@ def model_explorer(models):
                 additional_controls_container.children = [html_header('Additional controls')]+additional
             # hack to make it run the model immediately
             interactive_widget._display_callbacks(widget_interact_container)
-        else: # changed back to model type tag, clear result
-            clear_output(wait=False)
 
     tab_container = ipw.Tab(children=[widget_model_type_and_options, widget_parameters_container])
     tab_container.set_title(0, "Model type and options")
@@ -239,11 +237,13 @@ class VariableSelector(object):
         for choicename, choicedesc in choices.items():
             var = self.selection[choicename]
             options = self.vars.values()
-            self._widgets[choicename] = ipw.RadioButtons(description=choicedesc,
-                                                         options=options, value=self.vars[var])
-            self._widgets[choicename].name = choicename
+            self._widgets[choicename] = w = ipw.RadioButtons(description=choicedesc,
+                                                             options=options, value=self.vars[var])
+            w.name = choicename
+            w.layout.width = '100%'
+            w.style = {'description_width': '30%'}
             # this calls the change_var function if the value of any of the selectors changes
-            self._widgets[choicename].observe(change_var, names='value')
+            w.observe(change_var, names='value')
         self.widgets = self._widgets.values()
         if title is not None:
             # Use an HTML header to style it nicely
