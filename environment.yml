@@ -71,7 +71,6 @@ dependencies:
 - datashape=0.5.4
 - dateutil=2.4.1
 - decorator=4.1.2
-- distlib=0.2.5
 - distributed=1.19.1
 - docutils=0.14
 - dynd-python=removed
