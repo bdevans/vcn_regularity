@@ -1,0 +1,17 @@
+#!/bin/bash
+
+source activate kernel
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --sys-prefix
+jupyter nbextension enable init_cell/main
+jupyter nbextension enable hide_input_all/main
+#conda install -c conda-forge ipywidgets
+#jupyter nbextension enable --py widgetsnbextension
+
+#find ./notebooks -name '*.ipynb' -exec jupyter trust {} \;
+
+# Fix matplotlib font cache
+#rm -rf /home/main/.matplolib
+#rm -rf /home/main/.cache/matplolib
+#rm -rf /home/main/.cache/fontconfig
+#python -c "import matplotlib.pyplot as plt"
