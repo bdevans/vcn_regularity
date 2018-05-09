@@ -1,7 +1,8 @@
 FROM jupyter/scipy-notebook:82b978b3ceeb
 
 USER root
-ADD * /home/jovyan/
+#ADD * /home/jovyan/
+ADD ./ /home/jovyan/
 RUN chown -R jovyan /home/jovyan
 USER jovyan
 WORKDIR $HOME
@@ -14,6 +15,7 @@ RUN conda env update -v -n root -f environment.yml
 RUN conda install --quiet --yes jupyter_contrib_nbextensions==0.3.3
 RUN jupyter nbextension enable init_cell/main
 RUN jupyter nbextension enable hide_input_all/main
+RUN jupyter nbextension enable --py widgetsnbextension
 
 # Trust notebooks
 RUN find $HOME/ -name '*.ipynb' -exec jupyter trust {} \;
