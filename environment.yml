@@ -13,14 +13,14 @@ dependencies:
 - ipaddress
 - ipykernel
 - ipython
-- ipython-notebook=4.0.4
-- ipython-qtconsole
+# - ipython-notebook=4.0.4
 - ipython_genutils
 - ipywidgets=7.0.*
-- joblib==0.8.4
+# - joblib==0.8.4
+- joblib
 - jupyter_client=5.1.0
 - jupyter_core=4.3.0
-- matplotlib=1.5.1
+- matplotlib=1.5.*
 - nbconvert
 - nbformat
 - notebook=5.0.*
