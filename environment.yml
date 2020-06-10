@@ -2,7 +2,6 @@ name: root
 channels:
 - conda-forge
 - defaults
-- brian-team
 dependencies:
 - python=2.7.*
 - brian2
