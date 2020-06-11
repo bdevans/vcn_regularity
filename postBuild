@@ -1,5 +1,8 @@
 # Enable hide_input_all notebook extension
-jupyter nbextension enable hide_input_all/main
+# jupyter nbextension enable hide_input_all/main
 
 # Trust all notebooks
 find . -name '*.ipynb' -exec jupyter trust {} \;
+
+# Output all packages with versions
+conda list --explicit > environment-frozen.yml
