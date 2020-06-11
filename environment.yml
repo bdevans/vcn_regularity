@@ -5,7 +5,7 @@ channels:
 # - defaults
 dependencies:
 # - python=2.7.*
-- python=3.6
+- python=3.7
 # - pip=19.1*
 # - cython=0.29*
 # - nose=1.3*
