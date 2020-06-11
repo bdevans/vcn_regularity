@@ -1,1 +1,5 @@
+# Enable hide_input_all notebook extension
 jupyter nbextension enable hide_input_all/main
+
+# Trust all notebooks
+find . -name '*.ipynb' -exec jupyter trust {} \;
